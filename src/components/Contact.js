@@ -1,24 +1,32 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import {getPerson} from '../actions/contactACT'
 
 class Contact extends Component {
+	static defaultProps = {
+		name: {
+			first:'',
+			last:''
+		}
+	}
 	componentWillMount(){
-		
+		getPerson(this.props.match.params.id)
 	}
 	render () {
+		console.log(this.props)
 		return (
 			<div>
 			<h1>Contact of ID </h1>
 			<div className='contactWrap'>
-				{this.props.people.filter(person => person)[0]}
-				</div>
+			{this.props.name.first}
+			</div>
 			</div>
 		)
 	}
 }
 function mapAppStateToProps(appState){
 	return {
-		people: appState.people
+		...appState.person
 	}
 }
 export default connect(mapAppStateToProps)(Contact)

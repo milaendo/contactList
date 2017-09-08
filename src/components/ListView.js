@@ -1,13 +1,8 @@
 import React, { Component } from 'react'
-import {getData} from '../actions/contactACT'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
 class ListView extends Component {
-	componentWillMount(){
-		getData()
-	}
-
 	render () {
 		return (
 			<div>
@@ -15,7 +10,7 @@ class ListView extends Component {
 			<div>
 
 			{this.props.people.map(data => (
-				<Link to={'/Contact/' + data.id.value} ><p>{data.name.first} {data.name.last}</p></Link>
+				<Link key={data.shortid} to={'/Contact/' + data.shortid} ><p>{data.name.first} {data.name.last}</p></Link>
 
 			))}
 			</div>
