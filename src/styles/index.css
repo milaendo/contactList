@@ -1,5 +1,48 @@
 body {
-  margin: 0;
   padding: 0;
   font-family: sans-serif;
+  width:1000px;
+}
+
+#backbutton {
+	height:30px;
+	width:30px;
+	float:left;
+	padding:20px;
+}
+.firstWrap{
+	padding:20px;
+	text-align: center;
+	text-transform: capitalize;
+}
+.contactWrap{
+	margin:auto;
+	width:600px;
+	background-color: rgb(238,238,238);
+	color:rgb(162,167,162);
+	text-align: left;
+	text-transform: capitalize;
+	justify-content: center;
+}
+.listWrap {
+	margin: 50px;
+	display: flex;
+}
+a{
+	text-decoration: none;
+	color:black;
+	text-transform: capitalize;
+}
+.listPic{
+	border-radius: 50%;
+	padding: 20px;
+
+}
+.listMain{
+	text-align: center;
+	width:600px;
+}
+.anon{
+	width:100px;
+	height: 100px;
 }

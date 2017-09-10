@@ -7,7 +7,7 @@ class Home extends Component {
 			<div>
 			<h1>Home</h1>
 				<div className='nav'>
-				<Link to='/ListView'>List of Contacts</Link>
+				<Link to='/ListView'>View List of Contacts</Link>
 				</div>
 			</div>
 		)
